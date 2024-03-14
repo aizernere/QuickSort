@@ -37,7 +37,7 @@ int partition(int arr[], int low, int high) {
             cout << "Continue? ";
             cin >> holder;
         }else{
-        	cout<<arr[j]<<" is greater than or equal to Pivot: "<<pivot<<" so we pass."<<endl;
+        	cout<<arr[j]<<" is greater than Pivot: "<<pivot<<" so we pass."<<endl;
 		}
 	}
     swap(arr[i + 1], arr[high]);

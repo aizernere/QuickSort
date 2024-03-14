@@ -14,7 +14,8 @@ int partition(int arr[], int low, int high) {
     //j starts at first element
     int i = (low - 1);
 	cout<<"No i yet"<<endl;
-    for (int j = low; j <= high; j++) {
+	int j;
+    for (j = low; j < high; j++) {
     	cout<<"j is "<<arr[j]<<endl;
         // If current element is smaller than the pivot
         cout << "Continue? ";
@@ -24,7 +25,7 @@ int partition(int arr[], int low, int high) {
             cout<<arr[j]<<" is less than "<<pivot<<endl;
             
             // Increment index of smaller element
-            cout<<"Incrementing i"<<endl;
+            cout<<"Increamenting i"<<endl;
             i++;
             cout<<"i is "<<arr[i]<<endl;
             swap(arr[i], arr[j]);
@@ -40,24 +41,29 @@ int partition(int arr[], int low, int high) {
         	cout<<arr[j]<<" is greater than Pivot: "<<pivot<<" so we pass."<<endl;
 		}
 	}
-    swap(arr[i + 1], arr[high]);
-    cout << "Swapped " << arr[i + 1] << " and " << arr[high] << endl;
+	cout<<"j is "<<arr[j]<<" which is the pivot."<<endl;
+	cout<<"Increamenting i"<<endl;
+    i++;
+    cout<<"i is "<<arr[i]<<endl;
+    swap(arr[i], arr[high]);
+    cout << "Swapped " << arr[i] << " and " << arr[high] << endl;
     cout << "Array after swapping: ";
     for (int k = low; k <= high; k++) {
         cout << arr[k] << " ";
     }
     cout << endl;
+    cout<<"Pivot is at pos "<<i+1<<endl;
     cout << "Continue? ";
     cin >> holder;
-
-    return (i + 1);
+	
+    return (i);
 }
 
 
 void quickSort(int arr[], int low, int high) {
     // when low is less than high
     if (low < high) {
-        // return pivot which is pi
+        // return pivot position which is pi
         int pi = partition(arr, low, high);
 
         // smaller element than pivot goes left

@@ -42,7 +42,7 @@ int partition(int arr[], int low, int high) {
 		}
 	}
 	cout<<"j is "<<arr[j]<<" which is the pivot."<<endl;
-	cout<<"Increamenting i"<<endl;
+	cout<<"Incrementing i"<<endl;
     i++;
     cout<<"i is "<<arr[i]<<endl;
     swap(arr[i], arr[high]);

@@ -25,7 +25,7 @@ int partition(int arr[], int low, int high) {
             cout<<arr[j]<<" is less than "<<pivot<<endl;
             
             // Increment index of smaller element
-            cout<<"Increamenting i"<<endl;
+            cout<<"Incrementing i"<<endl;
             i++;
             cout<<"i is "<<arr[i]<<endl;
             swap(arr[i], arr[j]);
